@@ -1,0 +1,36 @@
+{
+  "name": "astro-app",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy",
+    "cf-typegen": "wrangler types",
+    "list-users": "npx wrangler d1 execute astro-cloud-test --local --command='SELECT * FROM users'",
+    "create-user": "node ./scripts/create_user",
+    "get-user": "node ./scripts/get_user",
+    "delete-user": "node ./scripts/delete_user"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/react": "^3.6.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "@auth/core": "^0.37.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^4.16.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.15"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "dotenv": "^16.4.5",
+    "env-var": "^7.5.0",
+    "wrangler": "^3.90.0"
+  }
+}

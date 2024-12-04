@@ -1,0 +1,13 @@
+---
+---
+
+<button id="logout-btn">
+    Logout
+</button>
+
+<script>
+
+    document.getElementById('logout-bnt').onclick = () => {
+        Astro.cookies.delete('session_token')
+    }
+</script>
